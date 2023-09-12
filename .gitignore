@@ -25,4 +25,5 @@ typings/
 .env
 
 # Production files
-dist
+# To commit to GitHub you need to delete the dist name (baceuse this is set for npm production)
+# dist
