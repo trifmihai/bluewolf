@@ -3,36 +3,33 @@
   // bin/live-reload.js
   new EventSource(`${"http://localhost:3000"}/esbuild`).addEventListener("change", () => location.reload());
 
-  // node_modules/.pnpm/@finsweet+ts-utils@0.39.2/node_modules/@finsweet/ts-utils/dist/webflow/getPublishDate.js
-  var getPublishDate = (page = document) => {
-    const publishDatePrefix = "Last Published:";
-    for (const node of page.childNodes) {
-      if (node.nodeType === Node.COMMENT_NODE && node.textContent?.includes(publishDatePrefix)) {
-        const publishDateValue = node.textContent.trim().split(publishDatePrefix)[1];
-        if (publishDateValue)
-          return new Date(publishDateValue);
-      }
-    }
-  };
-
-  // src/utils/greet.ts
-  var greetUser = (name) => {
-    const publishDate = getPublishDate();
-    console.log(`Hello ${name}!`);
-    console.log(
-      `This site was last published on ${publishDate?.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "2-digit"
-      })}.`
-    );
-  };
-
   // src/index.ts
-  window.Webflow ||= [];
-  window.Webflow.push(() => {
-    const name = "Mike Trif";
-    greetUser(name);
+  $(".projects-gallery_component").each(function(index) {
+    const totalSlides = $(this).find(".swiper-slide.is-slider-projects").length;
+    $(".swiper-number-total").text(totalSlides);
+    const swiper = new Swiper($(this).find(".swiper.is-slider-projects")[0], {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      allowTouchMove: true,
+      breakpoints: {
+        // when window width is >=
+        991: {
+          slidesPerView: 2,
+          allowTouchMove: false,
+          slideToClickedSlide: true
+        }
+      },
+      speed: 400,
+      loop: true,
+      navigation: {
+        nextEl: $(this).find(".swiper-next")[0],
+        prevEl: $(this).find(".swiper-prev")[0]
+      }
+    });
+    swiper.on("slideChange", function(e) {
+      const slideNumber = e.realIndex + 1;
+      $(".swiper-number-current").text(slideNumber);
+    });
   });
 })();
 //# sourceMappingURL=index.js.map
