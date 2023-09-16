@@ -16,7 +16,7 @@
         991: {
           slidesPerView: 2,
           allowTouchMove: false,
-          slideToClickedSlide: true
+          slideToClickedSlide: false
         }
       },
       speed: 400,

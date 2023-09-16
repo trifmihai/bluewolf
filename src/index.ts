@@ -10,7 +10,7 @@ $('.projects-gallery_component.is-projects').each(function (index) {
       991: {
         slidesPerView: 2,
         allowTouchMove: false,
-        slideToClickedSlide: true,
+        slideToClickedSlide: false,
       },
     },
 
