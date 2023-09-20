@@ -38,8 +38,9 @@ $('.projects-gallery_component.is-gallery').each(function (index) {
       // when window width is >=
       991: {
         slidesPerView: 3,
-        allowTouchMove: false,
-        slideToClickedSlide: true,
+        grabCursor: true,
+        allowTouchMove: true,
+        slideToClickedSlide: false,
       },
     },
 
