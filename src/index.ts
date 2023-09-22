@@ -1,3 +1,19 @@
+document.addEventListener('DOMContentLoaded', function () {
+  // Select all CMS images with a specific class
+  const cmsImages = document.querySelectorAll('.image_absolute');
+
+  cmsImages.forEach(function (img) {
+    // Add/Override the sizes attribute
+    img.setAttribute(
+      'sizes',
+      '(max-width: 479px) 44vw, (max-width: 767px) 47vw, (max-width: 991px) 46vw, (max-width: 1919px) 40vw, 520px'
+    );
+
+    // Optionally, you can also set/override the srcset attribute here
+    // img.setAttribute('srcset', '...');
+  });
+});
+
 $('.projects-gallery_component.is-projects').each(function (index) {
   const totalSlides = $(this).find('.swiper-slide.is-slider-projects').length;
   $('.swiper-number-total').text(totalSlides);

@@ -4,6 +4,15 @@
   new EventSource(`${"http://localhost:3000"}/esbuild`).addEventListener("change", () => location.reload());
 
   // src/index.ts
+  document.addEventListener("DOMContentLoaded", function() {
+    const cmsImages = document.querySelectorAll(".image_absolute");
+    cmsImages.forEach(function(img) {
+      img.setAttribute(
+        "sizes",
+        "(max-width: 479px) 44vw, (max-width: 767px) 47vw, (max-width: 991px) 46vw, (max-width: 1919px) 40vw, 520px"
+      );
+    });
+  });
   $(".projects-gallery_component.is-projects").each(function(index) {
     const totalSlides = $(this).find(".swiper-slide.is-slider-projects").length;
     $(".swiper-number-total").text(totalSlides);
