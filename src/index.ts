@@ -1,13 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Get the parent container
-  const container = document.querySelector('.slider-gallery_numbers');
-
-  if (container && container.innerHTML) {
-    // Replace the dash character with "of"
-    container.innerHTML = container.innerHTML.replace(/—/g, 'of');
-  }
-});
 /* 
+
+// defer
+
 document.addEventListener('DOMContentLoaded', function () {
   // Select all CMS images with a specific class
   const cmsImages = document.querySelectorAll('.image_projects');
@@ -41,6 +35,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // img.setAttribute('srcset', '...');
   });
 }); */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Get the parent container
+  const container = document.querySelector('.slider-gallery_numbers');
+
+  if (container && container.innerHTML) {
+    // Replace the dash character with "of"
+    container.innerHTML = container.innerHTML.replace(/—/g, 'of');
+  }
+});
 
 $('.projects-gallery_component.is-projects').each(function (index) {
   const totalSlides = $(this).find('.swiper-slide.is-slider-projects').length;
