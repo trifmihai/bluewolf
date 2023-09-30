@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = container.innerHTML.replace(/—/g, 'of');
   }
 });
-
+/* 
 document.addEventListener('DOMContentLoaded', function () {
   // Select all CMS images with a specific class
   const cmsImages = document.querySelectorAll('.image_projects');
@@ -40,9 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Optionally, you can also set/override the srcset attribute here
     // img.setAttribute('srcset', '...');
   });
-});
+}); */
 
-/*
 $('.projects-gallery_component.is-projects').each(function (index) {
   const totalSlides = $(this).find('.swiper-slide.is-slider-projects').length;
   $('.swiper-number-total').text(totalSlides);
@@ -101,4 +100,3 @@ $('.projects-gallery_component.is-gallery').each(function (index) {
     $('.swiper-number-current').text(slideNumber);
   });
 });
- */
