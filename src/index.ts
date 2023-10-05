@@ -71,11 +71,6 @@ declare let Swiper: any;
 document.querySelectorAll('.projects-gallery_component.is-projects').forEach(function (element) {
   const totalSlides = element.querySelectorAll('.swiper-slide.is-slider-projects').length;
 
-  const slides = element.querySelectorAll('.swiper-slide.is-slider-gallery');
-  slides.forEach((slide) => {
-    slide.setAttribute('role', 'listitem');
-  });
-
   const swiperNumberTotal = document.querySelector('.swiper-number-total');
   if (swiperNumberTotal !== null) {
     swiperNumberTotal.textContent = totalSlides.toString();
@@ -85,6 +80,7 @@ document.querySelectorAll('.projects-gallery_component.is-projects').forEach(fun
     slidesPerView: 1,
     spaceBetween: 24,
     allowTouchMove: true,
+    slideRole: 'listitem',
     breakpoints: {
       // when window width is >=
       991: {
@@ -114,11 +110,6 @@ document.querySelectorAll('.projects-gallery_component.is-projects').forEach(fun
 document.querySelectorAll('.projects-gallery_component.is-gallery').forEach(function (element) {
   const totalSlides = element.querySelectorAll('.swiper-slide.is-slider-gallery').length;
 
-  const slides = element.querySelectorAll('.swiper-slide.is-slider-gallery');
-  slides.forEach((slide) => {
-    slide.setAttribute('role', 'listitem');
-  });
-
   const swiperNumberTotal = document.querySelector('.swiper-number-total');
   if (swiperNumberTotal !== null) {
     swiperNumberTotal.textContent = totalSlides.toString();
@@ -128,6 +119,7 @@ document.querySelectorAll('.projects-gallery_component.is-gallery').forEach(func
     slidesPerView: 1,
     spaceBetween: 24,
     allowTouchMove: true,
+    slideRole: 'listitem',
     breakpoints: {
       // when window width is >=
       991: {
