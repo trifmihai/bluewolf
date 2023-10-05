@@ -80,7 +80,6 @@ document.querySelectorAll('.projects-gallery_component.is-projects').forEach(fun
     slidesPerView: 1,
     spaceBetween: 24,
     allowTouchMove: true,
-    slideRole: 'listitem',
     breakpoints: {
       // when window width is >=
       991: {
@@ -123,7 +122,6 @@ document.querySelectorAll('.projects-gallery_component.is-gallery').forEach(func
     slidesPerView: 1,
     spaceBetween: 24,
     allowTouchMove: true,
-    slideRole: 'listitem',
     breakpoints: {
       // when window width is >=
       991: {
