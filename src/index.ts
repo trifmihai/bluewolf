@@ -107,6 +107,10 @@ document.querySelectorAll('.projects-gallery_component.is-projects').forEach(fun
   });
 });
 
+document.querySelectorAll('.swiper-slide.is-slider-projects').forEach(function (slide) {
+  slide.setAttribute('role', 'listitem');
+});
+
 document.querySelectorAll('.projects-gallery_component.is-gallery').forEach(function (element) {
   const totalSlides = element.querySelectorAll('.swiper-slide.is-slider-gallery').length;
 
@@ -145,4 +149,8 @@ document.querySelectorAll('.projects-gallery_component.is-gallery').forEach(func
       swiperNumberCurrent.textContent = slideNumber.toString();
     }
   });
+});
+
+document.querySelectorAll('.swiper-slide.is-slider-gallery').forEach(function (slide) {
+  slide.setAttribute('role', 'listitem');
 });
