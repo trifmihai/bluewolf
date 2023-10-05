@@ -77,10 +77,10 @@ document.querySelectorAll('.projects-gallery_component.is-projects').forEach(fun
   }
 
   const swiper = new Swiper(element.querySelector('.swiper.is-slider-projects'), {
-    slideRole: 'listitem',
     slidesPerView: 1,
     spaceBetween: 24,
     allowTouchMove: true,
+    slideRole: 'listitem',
     breakpoints: {
       // when window width is >=
       991: {
@@ -116,10 +116,10 @@ document.querySelectorAll('.projects-gallery_component.is-gallery').forEach(func
   }
 
   const swiper = new Swiper(element.querySelector('.swiper.is-slider-gallery'), {
-    slideRole: 'listitem',
     slidesPerView: 1,
     spaceBetween: 24,
     allowTouchMove: true,
+    slideRole: 'listitem',
     breakpoints: {
       // when window width is >=
       991: {
